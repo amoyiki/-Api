@@ -1,101 +1,41 @@
-<mxfile host="app.diagrams.net" modified="2024-04-29T08:46:17.143Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="4iRSFrV9xSbV6wZQO-h5" version="24.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-29T08:48:53.296Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="FPyTT2AMvSe8tCltw1cy" version="24.3.1" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="1223" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="2284" dy="1861" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-1" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERzeroToMany;startArrow=ERone;endFill=1;startFill=0;" parent="1" source="C-vyLk0tnHw3VtMMgP7b-24" target="C-vyLk0tnHw3VtMMgP7b-6" edge="1">
-          <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="340" y="720" as="sourcePoint" />
-            <mxPoint x="440" y="620" as="targetPoint" />
+        <mxCell id="AOjPIcd2L-onLZbWiGYc-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_borrow_apply  /* 藏品展览-借展申请 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; apply_no  /* 借展申请编号 */: varchar(30)&lt;br/&gt; data_name  /* 借展名称 */: varchar(30)&lt;br/&gt; leave_museum  /* 是否需要出馆 */: tinyint(1)&lt;br/&gt; location  /* 展览地点 */: varchar(50)&lt;br/&gt; start_date  /* 借展开始日期 */: date&lt;br/&gt; plan_date  /* 计划归还日期 */: date&lt;br/&gt; actual_date  /* 实际归还日期 */: date&lt;br/&gt; theme  /* 展览主题 */: varchar(50)&lt;br/&gt; remarks  /* 备注信息 */: varchar(200)&lt;br/&gt; borrow_type  /* 借展类型 */: tinyint(1)&lt;br/&gt; borrow_type_name  /* 借展类型名称 */: varchar(30)&lt;br/&gt; company_name  /* 单位名称 */: varchar(50)&lt;br/&gt; contact_name  /* 姓名 */: varchar(20)&lt;br/&gt; contact_phone  /* 联系电话 */: varchar(20)&lt;br/&gt; id_card_front  /* 身份证正面 */: varchar(500)&lt;br/&gt; id_card_back  /* 身份证反面 */: varchar(500)&lt;br/&gt; auth_cert  /* 授权证明 */: varchar(500)&lt;br/&gt; apply_letter  /* 借展申请函 */: varchar(500)&lt;br/&gt; venue_no  /* 收藏单位编号 */: varchar(20)&lt;br/&gt; venue_name  /* 收藏单名称 */: varchar(50)&lt;br/&gt; state  /* 状态 */: tinyint(1)&lt;br/&gt; creator_name  /* 创建人名称 */: varchar(30)&lt;br/&gt; creator  /* 创建人 */: bigint(20)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; modifier  /* 修改人 */: bigint(20)&lt;br/&gt; modify_time  /* 修改时间 */: datetime&lt;br/&gt; is_deleted  /* 是否已删除 */: tinyint(1)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="-370" width="331" height="705" as="geometry" />
+        </mxCell>
+        <mxCell id="AOjPIcd2L-onLZbWiGYc-2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_borrow_item  /* 藏品展览-借展申请明细 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; borrow_id  /* 借展申请ID */: bigint(20)&lt;br/&gt; collection_id  /* 藏品ID */: bigint(20)&lt;br/&gt; collection_name  /* 藏品名称 */: varchar(50)&lt;br/&gt; image_urls  /* 藏品图片 */: varchar(500)&lt;br/&gt; category  /* 类别 */: varchar(20)&lt;br/&gt; actual_number  /* 实际数量 */: int(10)&lt;br/&gt; actual_number_units_Name  /* 实际数量单位 */: varchar(20)&lt;br/&gt; idle_number  /* 可出库数量 */: int(10)&lt;br/&gt; venue_no  /* 收藏单位编号 */: varchar(20)&lt;br/&gt; venue_name  /* 收藏单名称 */: varchar(50)&lt;br/&gt; apply_num  /* 借展申请数量 */: int(5)&lt;br/&gt; remarks  /* 展位备注 */: varchar(200)&lt;br/&gt; extra_info  /* 藏品附加信息 */: json&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-750" y="-290" width="387" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="AOjPIcd2L-onLZbWiGYc-3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_exhibition_item  /* 藏品展览-展览策划明细 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; exhibition_id  /* 展览策划ID */: bigint(20)&lt;br/&gt; collection_id  /* 藏品ID */: bigint(20)&lt;br/&gt; collection_name  /* 藏品名称 */: varchar(50)&lt;br/&gt; collection_state  /* 藏品状态 */: varchar(20)&lt;br/&gt; image_urls  /* 藏品图片 */: varchar(500)&lt;br/&gt; category  /* 类别 */: varchar(20)&lt;br/&gt; author  /* 作者 */: varchar(30)&lt;br/&gt; actual_number  /* 实际数量 */: int(10)&lt;br/&gt; idle_number  /* 可出库数量 */: int(10)&lt;br/&gt; creation_age  /* 创作年代 */: varchar(50)&lt;br/&gt; specific_size  /* 尺寸 */: varchar(1500)&lt;br/&gt; venue_no  /* 收藏单位编号 */: varchar(20)&lt;br/&gt; venue_name  /* 收藏单名称 */: varchar(50)&lt;br/&gt; remarks  /* 展位备注 */: varchar(200)&lt;br/&gt; extra_info  /* 藏品附加信息 */: json&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="-370" width="335" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="AOjPIcd2L-onLZbWiGYc-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=-0.006;entryY=0.159;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="AOjPIcd2L-onLZbWiGYc-4" target="AOjPIcd2L-onLZbWiGYc-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="-30" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-12" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERzeroToMany;startArrow=ERone;endFill=1;startFill=0;" parent="1" source="C-vyLk0tnHw3VtMMgP7b-3" target="C-vyLk0tnHw3VtMMgP7b-17" edge="1">
-          <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="400" y="180" as="sourcePoint" />
-            <mxPoint x="460" y="205" as="targetPoint" />
+        <mxCell id="AOjPIcd2L-onLZbWiGYc-4" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_exhibition_plan  /* 藏品展览-展览策划 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; exhibition_no  /* 展览编号 */: varchar(30)&lt;br/&gt; data_name  /* 展览名称 */: varchar(30)&lt;br/&gt; leave_museum  /* 是否需要出馆 */: tinyint(1)&lt;br/&gt; person_names  /* 展览负责人 */: varchar(100)&lt;br/&gt; start_date  /* 开始日期 */: date&lt;br/&gt; end_date  /* 结束日期 */: date&lt;br/&gt; exhibitors  /* 参展人员 */: varchar(100)&lt;br/&gt; location  /* 展览地点 */: varchar(50)&lt;br/&gt; data_type  /* 展览类型 */: tinyint(1)&lt;br/&gt; data_type_name  /* 展览类型名称 */: varchar(30)&lt;br/&gt; theme  /* 展览主题 */: varchar(50)&lt;br/&gt; venue_no  /* 场馆编号 */: varchar(20)&lt;br/&gt; venue_name  /* 场馆名称 */: varchar(50)&lt;br/&gt; remarks  /* 备注信息 */: varchar(200)&lt;br/&gt; state  /* 状态 */: tinyint(1)&lt;br/&gt; creator_name  /* 创建人名称 */: varchar(30)&lt;br/&gt; creator  /* 创建人 */: bigint(20)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; modifier  /* 修改人 */: bigint(20)&lt;br/&gt; modify_time  /* 修改时间 */: datetime&lt;br/&gt; is_deleted  /* 是否已删除 */: tinyint(1)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="-370" width="314" height="565" as="geometry" />
+        </mxCell>
+        <mxCell id="AOjPIcd2L-onLZbWiGYc-5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_venue_center  /* 藏品展览-场馆管理 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; venue_name  /* 场馆名称 */: varchar(30)&lt;br/&gt; sub_unit_no  /* 隶属单位编号 */: varchar(20)&lt;br/&gt; sub_unit_name  /* 隶属单位名称 */: varchar(30)&lt;br/&gt; contact  /* 联系人 */: varchar(20)&lt;br/&gt; contact_phone  /* 联系电话 */: varchar(20)&lt;br/&gt; space_size  /* 空间大小 */: varchar(20)&lt;br/&gt; address  /* 具体地址 */: varchar(50)&lt;br/&gt; description  /* 场馆描述 */: varchar(200)&lt;br/&gt; state  /* 启用禁用状态 */: tinyint(1)&lt;br/&gt; creator  /* 创建人 */: bigint(20)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; modifier  /* 修改人 */: bigint(20)&lt;br/&gt; modify_time  /* 修改时间 */: datetime&lt;br/&gt; is_deleted  /* 是否已删除 */: tinyint(1)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="475" y="130" width="305" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="AOjPIcd2L-onLZbWiGYc-6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_venue_reserve  /* 藏品展览-场馆预约 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; reserve_no  /* 策展预约编号 */: varchar(30)&lt;br/&gt; data_name  /* 展览名称 */: varchar(30)&lt;br/&gt; venue_no  /* 展览场馆编号 */: varchar(20)&lt;br/&gt; venue_name  /* 展览场馆名称 */: varchar(30)&lt;br/&gt; start_date  /* 开始日期 */: date&lt;br/&gt; end_date  /* 结束日期 */: date&lt;br/&gt; exhibitors  /* 参展人员 */: varchar(100)&lt;br/&gt; person_names  /* 展览负责人 */: varchar(100)&lt;br/&gt; contact  /* 联系方式 */: varchar(20)&lt;br/&gt; theme  /* 展览主题 */: varchar(50)&lt;br/&gt; description  /* 策展说明 */: varchar(200)&lt;br/&gt; remarks  /* 备注信息 */: varchar(200)&lt;br/&gt; state  /* 状态 */: tinyint(1)&lt;br/&gt; creator_name  /* 创建人名称 */: varchar(30)&lt;br/&gt; creator  /* 创建人 */: bigint(20)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; modifier  /* 修改人 */: bigint(20)&lt;br/&gt; modify_time  /* 修改时间 */: datetime&lt;br/&gt; is_deleted  /* 是否已删除 */: tinyint(1)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="250" width="308" height="535" as="geometry" />
+        </mxCell>
+        <mxCell id="AOjPIcd2L-onLZbWiGYc-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.003;exitY=0.979;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="AOjPIcd2L-onLZbWiGYc-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-420" y="350" as="sourcePoint" />
+            <mxPoint x="-360" y="-230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-350" y="320" />
+              <mxPoint x="-350" y="-230" />
+            </Array>
           </mxGeometry>
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-2" value="Orders" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
-          <mxGeometry x="450" y="120" width="250" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-3" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="C-vyLk0tnHw3VtMMgP7b-2" vertex="1">
-          <mxGeometry y="30" width="250" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-4" value="PK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;" parent="C-vyLk0tnHw3VtMMgP7b-3" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-5" value="order_id int NOT NULL " style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;" parent="C-vyLk0tnHw3VtMMgP7b-3" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-6" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="C-vyLk0tnHw3VtMMgP7b-2" vertex="1">
-          <mxGeometry y="60" width="250" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-7" value="FK1" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="C-vyLk0tnHw3VtMMgP7b-6" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-8" value="customer_id int NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="C-vyLk0tnHw3VtMMgP7b-6" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-9" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="C-vyLk0tnHw3VtMMgP7b-2" vertex="1">
-          <mxGeometry y="90" width="250" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-10" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="C-vyLk0tnHw3VtMMgP7b-9" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-11" value="order_date date NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="C-vyLk0tnHw3VtMMgP7b-9" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-13" value="Shipments" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
-          <mxGeometry x="450" y="280" width="250" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-14" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="C-vyLk0tnHw3VtMMgP7b-13" vertex="1">
-          <mxGeometry y="30" width="250" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-15" value="PK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;" parent="C-vyLk0tnHw3VtMMgP7b-14" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-16" value="shipment_id int NOT NULL " style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;" parent="C-vyLk0tnHw3VtMMgP7b-14" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-17" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="C-vyLk0tnHw3VtMMgP7b-13" vertex="1">
-          <mxGeometry y="60" width="250" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-18" value="FK1" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="C-vyLk0tnHw3VtMMgP7b-17" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-19" value="order_id int NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="C-vyLk0tnHw3VtMMgP7b-17" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-20" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="C-vyLk0tnHw3VtMMgP7b-13" vertex="1">
-          <mxGeometry y="90" width="250" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-21" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="C-vyLk0tnHw3VtMMgP7b-20" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-22" value="shipment_date date NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="C-vyLk0tnHw3VtMMgP7b-20" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-23" value="Customers" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
-          <mxGeometry x="120" y="120" width="250" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-24" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="C-vyLk0tnHw3VtMMgP7b-23" vertex="1">
-          <mxGeometry y="30" width="250" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-25" value="PK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;" parent="C-vyLk0tnHw3VtMMgP7b-24" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-26" value="customer_id int NOT NULL " style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;" parent="C-vyLk0tnHw3VtMMgP7b-24" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-27" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="C-vyLk0tnHw3VtMMgP7b-23" vertex="1">
-          <mxGeometry y="60" width="250" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-28" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="C-vyLk0tnHw3VtMMgP7b-27" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-29" value="customer_name char(50) NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="C-vyLk0tnHw3VtMMgP7b-27" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
