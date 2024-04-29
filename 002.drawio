@@ -1,101 +1,126 @@
-<mxfile host="app.diagrams.net" modified="2024-04-29T08:24:30.950Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="eJjqyWmi6N09FIW42Pmw" version="24.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-29T08:35:20.051Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="y4h06O-RvbOs-x3k4C1k" version="24.3.1" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="1223" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="4435" dy="3003" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-1" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERzeroToMany;startArrow=ERone;endFill=1;startFill=0;" parent="1" source="C-vyLk0tnHw3VtMMgP7b-24" target="C-vyLk0tnHw3VtMMgP7b-6" edge="1">
-          <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="340" y="720" as="sourcePoint" />
-            <mxPoint x="440" y="620" as="targetPoint" />
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_subscribe_calendar  /* 预约讲解日历 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id: bigint(20)&lt;br/&gt; guide  /* 讲解员人员 */: varchar(255)&lt;br/&gt; one_order_count  /* 散客预约订单数 */: int(11)&lt;br/&gt; one_person_count  /* 散客预约人数 */: int(11)&lt;br/&gt; team_order_count  /* 团队预约订单数 */: int(11)&lt;br/&gt; team_person_count  /* 团队预约人数 */: int(11)&lt;br/&gt; guide_date  /* 讲解日 */: date&lt;br/&gt; create_time: datetime&lt;br/&gt; update_time: datetime&lt;br/&gt; tenant_no  /* 租户号 */: varchar(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-800" y="-651" width="318" height="251" as="geometry" />
+        </mxCell>
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_subscribe_one_config  /* 散客预约-配置表 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; title  /* 标题 */: varchar(255)&lt;br/&gt; subscribe_notice  /* 预约须知 */: text&lt;br/&gt; subscribe_type  /* 预约方式（0普通预约，1分时预约） */: tinyint(1)&lt;br/&gt; ahead_limit_type  /* 可提前预约限制（1-不限，2-限制） */: tinyint(1)&lt;br/&gt; ahead_limit_s  /* 提前预约开始小时数 */: int(11)&lt;br/&gt; ahead_limit_e  /* 提前预约结束小时数 */: int(11)&lt;br/&gt; min_reserve_status  /* 最低预约人数限制状态（1-不限，2-限制） */: tinyint(1)&lt;br/&gt; min_reserve_num  /* 最低预约人数 */: int(11)&lt;br/&gt; max_reserve_status  /* 最高预约人数限制状态（1-不限，2-限制） */: tinyint(1)&lt;br/&gt; max_reserve_num  /* 最高预约人数 */: int(11)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; update_time  /* 修改时间 */: datetime&lt;br/&gt; tenant_no  /* 租户号 */: varchar(20)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="-510" width="462" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_subscribe_one_config_price  /* 散客预约-配置-价格表 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; config_id  /* 配置id */: bigint(20)&lt;br/&gt; starttime  /* 时间段开始时间 */: int(11)&lt;br/&gt; endtime  /* 时间段结束时间 */: int(11)&lt;br/&gt; startdate  /* 开始日期 */: varchar(255)&lt;br/&gt; enddate  /* 结束日期 */: varchar(255)&lt;br/&gt; weekdays  /* 开放日 */: varchar(255)&lt;br/&gt; time_share  /* 分时时间段 */: varchar(500)&lt;br/&gt; limit_type  /* 上限类型：1-天上限，2-分时上限 */: tinyint(1)&lt;br/&gt; limit_time_storage  /* 分时上限库存 */: int(11)&lt;br/&gt; limit_day_storage  /* 天上限库存 */: int(11)&lt;br/&gt; limit_day_show_storage  /* 天上限展示库存 */: int(11)&lt;br/&gt; limit_day_real_storage  /* 天上限实际库存 */: int(11)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; update_time  /* 修改时间 */: datetime&lt;br/&gt; tenant_no  /* 租户号 */: varchar(20)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-251.5" y="-180" width="430" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-4" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_subscribe_one_order  /* 散客预约-订单表 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; config_id  /* 配置id */: bigint(20)&lt;br/&gt; order_no  /* 订单编号 */: varchar(255)&lt;br/&gt; subscribe_type  /* 预约类型（0普通预约，1分时预约） */: tinyint(1)&lt;br/&gt; user_id  /* 用户id */: int(11)&lt;br/&gt; traveldate  /* 预约日期 */: varchar(255)&lt;br/&gt; traveltime  /* 预约时间 */: varchar(255)&lt;br/&gt; travelcustom  /* 预约自定义时间点 */: varchar(255)&lt;br/&gt; travel_time_start  /* 预约开始时间戳 */: int(11)&lt;br/&gt; travel_time_end  /* 预约结束时间戳 */: int(11)&lt;br/&gt; subscribe_num  /* 预约参观人数 */: int(11)&lt;br/&gt; fullname  /* 姓名 */: varchar(255)&lt;br/&gt; phone  /* 手机号 */: varchar(255)&lt;br/&gt; identify_type  /* 证件类型 */: tinyint(4)&lt;br/&gt; identify_type_name  /* 证件类型名称 */: varchar(255)&lt;br/&gt; identify_num  /* 证件号 */: varchar(255)&lt;br/&gt; enter_qrcode_url  /* 入园码 */: varchar(255)&lt;br/&gt; code_url  /* 入园码oss地址 */: varchar(255)&lt;br/&gt; remark  /* 备注 */: varchar(255)&lt;br/&gt; status  /* 订单状态（1-已完成，2-已取消） */: tinyint(1)&lt;br/&gt; enter_qrcode_status  /* 入园码状态（0-待生效，1-待使用，2-已使用，3-已过期） */: tinyint(4)&lt;br/&gt; is_delete  /* 是否删除（0正常 1删除） */: tinyint(1)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; update_time  /* 修改时间 */: datetime&lt;br/&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; audit_status  /* 审批状态 1草稿中 2审核中 3 审核通过 4审核不通过 5已关闭 6已作废 */: tinyint(1)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-310" y="-870" width="547" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_subscribe_one_order_log  /* 散客预约-订单-日志表 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; order_id  /* 订单id */: bigint(20)&lt;br/&gt; type  /* 类型 */: varchar(255)&lt;br/&gt; remark  /* 备注 */: varchar(255)&lt;br/&gt; operator  /* 操作人员 */: varchar(255)&lt;br/&gt; create_time: datetime&lt;br/&gt; update_time: datetime&lt;br/&gt; tenant_no  /* 租户号 */: varchar(20)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-171" y="290" width="408" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_subscribe_one_order_visitor  /* 散客预约-订单-参观者表 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; order_id  /* 订单id */: bigint(20)&lt;br/&gt; fullname  /* 姓名 */: varchar(255)&lt;br/&gt; phone  /* 手机号 */: varchar(255)&lt;br/&gt; identify_type  /* 证件类型 */: tinyint(4)&lt;br/&gt; identify_type_name  /* 证件类型名称 */: varchar(255)&lt;br/&gt; identify_num  /* 证件号 */: varchar(255)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; update_time  /* 修改时间 */: datetime&lt;br/&gt; tenant_no  /* 租户号 */: varchar(20)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="237" y="-60" width="443" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_subscribe_scenic  /* 预约景区详情 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; name  /* 景区名称 */: varchar(100)&lt;br/&gt; logo  /* 景区图片（景区LOGO） */: varchar(500)&lt;br/&gt; banner  /* 景区轮播图 */: varchar(1500)&lt;br/&gt; video_url  /* 景区视频地址 */: varchar(255)&lt;br/&gt; video_cover  /* 景区视频封面 */: varchar(255)&lt;br/&gt; desc  /* 景区介绍(详细介绍) */: text&lt;br/&gt; play_notice  /* 游玩须知 */: text&lt;br/&gt; scenic_level  /* 景区级别 */: tinyint(4)&lt;br/&gt; scenic_type  /* 景区类型（景区标签） */: varchar(255)&lt;br/&gt; scenic_show_name  /* 景区展示文字(室内导览，替换相关景区文字) */: varchar(100)&lt;br/&gt; province_no  /* 所在省份编码 */: int(11)&lt;br/&gt; region_no  /* 所在地区编码 */: int(11)&lt;br/&gt; region_name  /* 所在地区 */: varchar(50)&lt;br/&gt; address  /* 景区地址（详细地址） */: varchar(255)&lt;br/&gt; open_time  /* 开放时间 */: varchar(255)&lt;br/&gt; open_start_time  /* 景区开放开始时间 */: varchar(255)&lt;br/&gt; open_end_time  /* 景区开放结束时间 */: varchar(255)&lt;br/&gt; details  /* 景区详情 */: varchar(5000)&lt;br/&gt; lat  /* 景区纬度 */: varchar(20)&lt;br/&gt; lng  /* 景区经度 */: varchar(20)&lt;br/&gt; status  /* 状态（-1删除0禁用1启用） */: tinyint(4)&lt;br/&gt; vr_url  /* vr地址 */: varchar(255)&lt;br/&gt; telephone  /* 景区电话 */: varchar(255)&lt;br/&gt; create_time: datetime&lt;br/&gt; update_time: datetime&lt;br/&gt; tags  /* 景区标签 */: varchar(300)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-810" y="-230" width="489" height="648" as="geometry" />
+        </mxCell>
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_subscribe_team_config  /* 团队预约-配置表 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; title  /* 标题 */: varchar(255)&lt;br/&gt; subscribe_notice  /* 预约须知 */: text&lt;br/&gt; subscribe_type  /* 预约方式（0普通预约，1分时预约） */: tinyint(1)&lt;br/&gt; ahead_limit_type  /* 可提前预约限制（1-不限，2-限制） */: tinyint(1)&lt;br/&gt; ahead_limit_s  /* 提前预约开始小时数 */: int(11)&lt;br/&gt; ahead_limit_e  /* 提前预约结束小时数 */: int(11)&lt;br/&gt; min_reserve_status  /* 最低预约人数限制状态（1-不限，2-限制） */: tinyint(1)&lt;br/&gt; min_reserve_num  /* 最低预约人数 */: int(11)&lt;br/&gt; max_reserve_status  /* 最高预约人数限制状态（1-不限，2-限制） */: tinyint(1)&lt;br/&gt; max_reserve_num  /* 最高预约人数 */: int(11)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; update_time  /* 修改时间 */: datetime&lt;br/&gt; tenant_no  /* 租户号 */: varchar(20)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="531.5" y="-1020" width="462" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-9" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_subscribe_team_config_price  /* 团队预约-配置-价格表 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; config_id  /* 配置id */: bigint(20)&lt;br/&gt; starttime  /* 时间段开始时间 */: int(11)&lt;br/&gt; endtime  /* 时间段结束时间 */: int(11)&lt;br/&gt; startdate  /* 开始日期 */: varchar(255)&lt;br/&gt; enddate  /* 结束日期 */: varchar(255)&lt;br/&gt; weekdays  /* 开放日 */: varchar(255)&lt;br/&gt; time_share  /* 分时时间段 */: varchar(500)&lt;br/&gt; limit_type  /* 上限类型：1-天上限，2-分时上限 */: tinyint(1)&lt;br/&gt; limit_day_storage  /* 天上限库存 */: int(11)&lt;br/&gt; limit_time_storage  /* 分时上限库存 */: int(11)&lt;br/&gt; limit_day_show_storage  /* 天上限展示库存 */: int(11)&lt;br/&gt; limit_day_real_storage  /* 天上限实际库存 */: int(11)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; update_time  /* 修改时间 */: datetime&lt;br/&gt; tenant_no  /* 租户号 */: varchar(20)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="-370" width="441" height="424" as="geometry" />
+        </mxCell>
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-10" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_subscribe_team_order  /* 团队预约-订单表 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; config_id  /* 配置id */: bigint(20)&lt;br/&gt; order_no  /* 订单编号 */: varchar(255)&lt;br/&gt; supplier_order_no  /* 票付通订单号 */: varchar(255)&lt;br/&gt; subscribe_type  /* 预约类型（0普通预约，1分时预约） */: tinyint(1)&lt;br/&gt; user_id  /* 用户id */: int(11)&lt;br/&gt; traveldate  /* 预约日期 */: varchar(255)&lt;br/&gt; traveltime  /* 预约时间 */: varchar(255)&lt;br/&gt; travelcustom  /* 预约自定义时间点 */: varchar(255)&lt;br/&gt; travel_time_start  /* 预约开始时间戳 */: int(11)&lt;br/&gt; travel_time_end  /* 预约结束时间戳 */: int(11)&lt;br/&gt; subscribe_num  /* 预约参观人数 */: int(11)&lt;br/&gt; unit_name  /* 单位名称（自定义） */: varchar(255)&lt;br/&gt; fullname  /* 姓名 */: varchar(255)&lt;br/&gt; phone  /* 手机号 */: varchar(255)&lt;br/&gt; enter_qrcode_url  /* 入园码 */: varchar(255)&lt;br/&gt; code_url  /* 入园码oss地址 */: varchar(255)&lt;br/&gt; remark  /* 备注 */: varchar(255)&lt;br/&gt; status  /* 订单状态（1-已完成，2-已取消） */: tinyint(1)&lt;br/&gt; enter_qrcode_status  /* 入园码状态（0-待生效，1-待使用，2-已使用，3-已过期） */: tinyint(4)&lt;br/&gt; is_delete  /* 是否删除（0正常 1删除） */: tinyint(1)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; update_time  /* 修改时间 */: datetime&lt;br/&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; audit_status  /* 审批状态 1草稿中 2审核中 3 审核通过 4审核不通过 5已关闭 6已作废 */: tinyint(1)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="-1020" width="547" height="620" as="geometry" />
+        </mxCell>
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-11" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_subscribe_team_order_file  /* 团队预约-订单-文件表 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; order_id  /* 订单id */: bigint(20)&lt;br/&gt; name  /* 文件名称 */: varchar(255)&lt;br/&gt; format  /* 文件格式 */: varchar(255)&lt;br/&gt; size  /* 文件大小 */: varchar(255)&lt;br/&gt; url  /* 文件地址 */: varchar(255)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; update_time  /* 修改时间 */: datetime&lt;br/&gt; tenant_no  /* 租户号 */: varchar(20)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="420" width="419" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-12" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_subscribe_team_order_log  /* 团队预约-订单-日志表 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; business_id  /* 商户id */: int(11)&lt;br/&gt; order_id  /* 订单id */: bigint(20)&lt;br/&gt; type  /* 类型 */: varchar(255)&lt;br/&gt; remark  /* 备注 */: varchar(255)&lt;br/&gt; operator  /* 操作人员 */: varchar(255)&lt;br/&gt; create_time: int(11)&lt;br/&gt; update_time: int(11)&lt;br/&gt; tenant_no  /* 租户号 */: varchar(20)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="280.5" width="419" height="259" as="geometry" />
+        </mxCell>
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-13" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;col_subscribe_team_order_visitor  /* 团队预约-订单-参观者表 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; order_id  /* 订单id */: bigint(20)&lt;br/&gt; fullname  /* 姓名 */: varchar(255)&lt;br/&gt; phone  /* 手机号 */: varchar(255)&lt;br/&gt; identify_type  /* 证件类型 */: tinyint(4)&lt;br/&gt; identify_type_name  /* 证件类型名称 */: varchar(255)&lt;br/&gt; identify_num  /* 证件号 */: varchar(255)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; update_time  /* 修改时间 */: datetime&lt;br/&gt; tenant_no  /* 租户号 */: varchar(20)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="896" y="120" width="455" height="252" as="geometry" />
+        </mxCell>
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-14" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=-0.004;exitY=0.945;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.999;entryY=0.099;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="lzXXB1SUb64DfuJfmchJ-2" target="lzXXB1SUb64DfuJfmchJ-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="496" y="-160" as="sourcePoint" />
+            <mxPoint x="546" y="-210" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="240" y="-150" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-12" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERzeroToMany;startArrow=ERone;endFill=1;startFill=0;" parent="1" source="C-vyLk0tnHw3VtMMgP7b-3" target="C-vyLk0tnHw3VtMMgP7b-17" edge="1">
-          <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="400" y="180" as="sourcePoint" />
-            <mxPoint x="460" y="205" as="targetPoint" />
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-15" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;entryX=0.999;entryY=0.099;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.009;exitY=0.948;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="lzXXB1SUb64DfuJfmchJ-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="-250" as="sourcePoint" />
+            <mxPoint x="233" y="-826" as="targetPoint" />
+            <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-2" value="Orders" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
-          <mxGeometry x="450" y="120" width="250" height="130" as="geometry" />
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-16" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;entryX=0.004;entryY=0.067;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="lzXXB1SUb64DfuJfmchJ-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1000" y="-670" as="sourcePoint" />
+            <mxPoint x="780" y="-570" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1050" y="-810" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-3" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="C-vyLk0tnHw3VtMMgP7b-2" vertex="1">
-          <mxGeometry y="30" width="250" height="30" as="geometry" />
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-17" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=-0.012;entryY=0.101;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="lzXXB1SUb64DfuJfmchJ-8" target="lzXXB1SUb64DfuJfmchJ-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="308" y="-131" as="sourcePoint" />
+            <mxPoint x="198" y="-117" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="890" y="-560" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-4" value="PK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;" parent="C-vyLk0tnHw3VtMMgP7b-3" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-18" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=0.575;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="lzXXB1SUb64DfuJfmchJ-4" target="lzXXB1SUb64DfuJfmchJ-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="-260" as="sourcePoint" />
+            <mxPoint x="410" y="-310" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-280" y="60" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-5" value="order_id int NOT NULL " style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;" parent="C-vyLk0tnHw3VtMMgP7b-3" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-19" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=-0.003;exitY=0.974;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="lzXXB1SUb64DfuJfmchJ-10" target="lzXXB1SUb64DfuJfmchJ-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="890" y="-470" as="sourcePoint" />
+            <mxPoint x="740" y="190" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="850" y="-20" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-6" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="C-vyLk0tnHw3VtMMgP7b-2" vertex="1">
-          <mxGeometry y="60" width="250" height="30" as="geometry" />
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-22" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;entryX=-0.001;entryY=0.202;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.001;exitY=0.972;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="lzXXB1SUb64DfuJfmchJ-10" target="lzXXB1SUb64DfuJfmchJ-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="860" y="-350" as="sourcePoint" />
+            <mxPoint x="940" y="200" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="830" y="250" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-7" value="FK1" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="C-vyLk0tnHw3VtMMgP7b-6" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-23" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=-0.003;exitY=0.97;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.001;entryY=0.185;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="lzXXB1SUb64DfuJfmchJ-10" target="lzXXB1SUb64DfuJfmchJ-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="890" y="-200" as="sourcePoint" />
+            <mxPoint x="940" y="-250" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="810" y="-140" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-8" value="customer_id int NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="C-vyLk0tnHw3VtMMgP7b-6" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-9" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="C-vyLk0tnHw3VtMMgP7b-2" vertex="1">
-          <mxGeometry y="90" width="250" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-10" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="C-vyLk0tnHw3VtMMgP7b-9" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-11" value="order_date date NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="C-vyLk0tnHw3VtMMgP7b-9" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-13" value="Shipments" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
-          <mxGeometry x="450" y="280" width="250" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-14" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="C-vyLk0tnHw3VtMMgP7b-13" vertex="1">
-          <mxGeometry y="30" width="250" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-15" value="PK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;" parent="C-vyLk0tnHw3VtMMgP7b-14" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-16" value="shipment_id int NOT NULL " style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;" parent="C-vyLk0tnHw3VtMMgP7b-14" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-17" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="C-vyLk0tnHw3VtMMgP7b-13" vertex="1">
-          <mxGeometry y="60" width="250" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-18" value="FK1" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="C-vyLk0tnHw3VtMMgP7b-17" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-19" value="order_id int NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="C-vyLk0tnHw3VtMMgP7b-17" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-20" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="C-vyLk0tnHw3VtMMgP7b-13" vertex="1">
-          <mxGeometry y="90" width="250" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-21" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="C-vyLk0tnHw3VtMMgP7b-20" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-22" value="shipment_date date NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="C-vyLk0tnHw3VtMMgP7b-20" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-23" value="Customers" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
-          <mxGeometry x="120" y="120" width="250" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-24" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="C-vyLk0tnHw3VtMMgP7b-23" vertex="1">
-          <mxGeometry y="30" width="250" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-25" value="PK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;" parent="C-vyLk0tnHw3VtMMgP7b-24" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-26" value="customer_id int NOT NULL " style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;" parent="C-vyLk0tnHw3VtMMgP7b-24" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-27" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="C-vyLk0tnHw3VtMMgP7b-23" vertex="1">
-          <mxGeometry y="60" width="250" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-28" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="C-vyLk0tnHw3VtMMgP7b-27" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-29" value="customer_name char(50) NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="C-vyLk0tnHw3VtMMgP7b-27" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
+        <mxCell id="lzXXB1SUb64DfuJfmchJ-24" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=0.801;exitY=1.002;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="lzXXB1SUb64DfuJfmchJ-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="-250" as="sourcePoint" />
+            <mxPoint x="230" y="-10" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="-120" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
