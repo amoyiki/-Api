@@ -1,101 +1,146 @@
-<mxfile host="app.diagrams.net" modified="2024-04-29T08:04:36.041Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="VVlayiiQ0oG098Rsb1Ux" version="24.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-29T08:22:43.835Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="YWkPDbvvNGHR53nDWi9Q" version="24.3.1" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="1223" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="3906" dy="2271" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-1" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERzeroToMany;startArrow=ERone;endFill=1;startFill=0;" parent="1" source="C-vyLk0tnHw3VtMMgP7b-24" target="C-vyLk0tnHw3VtMMgP7b-6" edge="1">
-          <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="340" y="720" as="sourcePoint" />
-            <mxPoint x="440" y="620" as="targetPoint" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_approval_condition  /* 审批流-条件 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; module_id  /* 审批模块ID */: bigint(20)&lt;br/&gt; enable_cond  /* 是否开启条件 */: tinyint(1)&lt;br/&gt; scene_name  /* 场景名称 */: varchar(30)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20) unsigned&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-630" y="1100" width="312" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_approval_levels  /* 审批流-层级 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; module_id  /* 审批模块ID */: bigint(20)&lt;br/&gt; condition_id  /* 条件ID */: bigint(20)&lt;br/&gt; levels  /* 审批级别 */: int(11)&lt;br/&gt; level_type  /* 审批人类型（1：负责人，2：任意，3：全部，4：上级主管） */: tinyint(1)&lt;br/&gt; person_ids  /* 审批人ID */: varchar(500)&lt;br/&gt; person_names  /* 审批人名称 */: varchar(500)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20) unsigned&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-1169" y="790" width="489" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-4" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_approval_module  /* 审批流-模块 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; module_code  /* 模块标识 */: varchar(50)&lt;br/&gt; module_name  /* 模块名称 */: varchar(50)&lt;br/&gt; enable_approval  /* 是否开启审批 */: tinyint(1)&lt;br/&gt; enable_scene  /* 是否开启场景 */: tinyint(1)&lt;br/&gt; enable_warehouse  /* 是否开启仓库负责人 */: tinyint(1)&lt;br/&gt; sort  /* 排序 */: int(11)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20) unsigned&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-630" y="790" width="341" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-34" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="fjgYcrH6V1LgINaARoSQ-5" target="fjgYcrH6V1LgINaARoSQ-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-740" y="486" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-12" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERzeroToMany;startArrow=ERone;endFill=1;startFill=0;" parent="1" source="C-vyLk0tnHw3VtMMgP7b-3" target="C-vyLk0tnHw3VtMMgP7b-17" edge="1">
-          <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="400" y="180" as="sourcePoint" />
-            <mxPoint x="460" y="205" as="targetPoint" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-40" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.999;exitY=0.177;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="fjgYcrH6V1LgINaARoSQ-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-260" y="420" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-2" value="Orders" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
-          <mxGeometry x="450" y="120" width="250" height="130" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_approval_process  /* 审批流-已发起流程 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; business_id  /* 业务ID */: bigint(20)&lt;br/&gt; business_no  /* 业务编号 */: varchar(30)&lt;br/&gt; module_id  /* 审批模块ID */: bigint(20)&lt;br/&gt; module_name  /* 审批模块名称 */: varchar(50)&lt;br/&gt; total_level  /* 审批层级数 */: int(11)&lt;br/&gt; current_level  /* 当前审批层级 */: int(11)&lt;br/&gt; person_ids  /* 当前审批人ID */: text&lt;br/&gt; person_names  /* 当前审批人名称 */: text&lt;br/&gt; mode  /* 审批模式（0：任意，1：所有） */: tinyint(1)&lt;br/&gt; state  /* 审批状态（0：审批中，1：已通过，2：未通过） */: tinyint(1)&lt;br/&gt; approval_code  /* 审批详情标识 */: varchar(200)&lt;br/&gt; callback_uri  /* 回调地址 */: varchar(100)&lt;br/&gt; creator  /* 创建人 */: bigint(20)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20) unsigned&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-710" y="330" width="392" height="420" as="geometry" />
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-3" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="C-vyLk0tnHw3VtMMgP7b-2" vertex="1">
-          <mxGeometry y="30" width="250" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_approval_process_item  /* 审批流-已发起流程明细 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; process_id  /* 审核流程ID */: bigint(20)&lt;br/&gt; business_item_id  /* 业务明细id */: bigint(20)&lt;br/&gt; current_level  /* 审核层级 */: int(11)&lt;br/&gt; person_id  /* 审核人id */: bigint(20)&lt;br/&gt; person_name  /* 审核人 */: varchar(30)&lt;br/&gt; state  /* 审批状态（0：待审批，1：已通过，2：未通过） */: tinyint(1)&lt;br/&gt; reason  /* 审核意见 */: varchar(200)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20) unsigned&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-1160" y="415" width="400" height="285" as="geometry" />
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-4" value="PK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;" parent="C-vyLk0tnHw3VtMMgP7b-3" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_dept  /* 系统-部门 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; parent_id  /* 父级ID */: bigint(20)&lt;br/&gt; dept_name  /* 部门名称 */: varchar(30)&lt;br/&gt; person_ids  /* ID */: varchar(255)&lt;br/&gt; person_names: varchar(255)&lt;br/&gt; dept_desc  /* 部门描述 */: varchar(50)&lt;br/&gt; state  /* 状态（0：未启用，1：启用） */: tinyint(1)&lt;br/&gt; creator  /* 创建人 */: bigint(20)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; modifier  /* 更新人 */: bigint(20)&lt;br/&gt; modify_time  /* 更新时间 */: datetime&lt;br/&gt; is_deleted  /* 是否删除 */: tinyint(1)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20) unsigned&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="-26" width="297" height="318" as="geometry" />
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-5" value="order_id int NOT NULL " style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;" parent="C-vyLk0tnHw3VtMMgP7b-3" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_log_approval  /* 系统-审批日志 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; business_id  /* 业务ID */: bigint(20)&lt;br/&gt; business_no  /* 业务编号 */: varchar(30)&lt;br/&gt; module_name  /* 审批类型 */: varchar(30)&lt;br/&gt; person_id  /* 审核人id */: bigint(20)&lt;br/&gt; person_name  /* 审核人 */: varchar(30)&lt;br/&gt; submit_time  /* 提交时间 */: datetime&lt;br/&gt; state  /* 审批状态（0：待审批，1：已通过，2：未通过） */: tinyint(1)&lt;br/&gt; remark  /* 审核意见 */: varchar(200)&lt;br/&gt; creator  /* 创建人 */: bigint(20)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; modifier  /* 更新人 */: bigint(20)&lt;br/&gt; modify_time  /* 更新时间 */: datetime&lt;br/&gt; is_deleted  /* 是否删除 */: tinyint(1)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20) unsigned&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-250" y="352.5" width="392" height="410" as="geometry" />
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-6" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="C-vyLk0tnHw3VtMMgP7b-2" vertex="1">
-          <mxGeometry y="60" width="250" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-9" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_log_login  /* 系统-登录日志 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; user_id  /* 登录用户ID */: bigint(20)&lt;br/&gt; username  /* 登录用户名称 */: varchar(30)&lt;br/&gt; browser  /* 浏览器版本 */: varchar(50)&lt;br/&gt; system  /* 操作系统 */: varchar(50)&lt;br/&gt; ip  /* 登录IP */: varchar(30)&lt;br/&gt; address  /* 地址 */: varchar(50)&lt;br/&gt; device_type  /* 终端类型 */: varchar(10)&lt;br/&gt; login_time  /* 登录时间 */: datetime&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20) unsigned&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-1486" y="130" width="269" height="252" as="geometry" />
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-7" value="FK1" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="C-vyLk0tnHw3VtMMgP7b-6" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-10" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_log_operate  /* 系统-操作日志 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; user_id  /* 操作人员 */: bigint(20)&lt;br/&gt; username  /* 操作名称 */: varchar(30)&lt;br/&gt; module_name  /* 所属模块 */: varchar(30)&lt;br/&gt; content  /* 操作对象 */: varchar(50)&lt;br/&gt; operate_type  /* 操作类型 */: varchar(20)&lt;br/&gt; operate_time  /* 操作时间 */: datetime&lt;br/&gt; remark  /* 备注 */: varchar(300)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20) unsigned&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-1485" y="415" width="274" height="230" as="geometry" />
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-8" value="customer_id int NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="C-vyLk0tnHw3VtMMgP7b-6" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-11" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_log_system  /* 系统-系统日志 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; user_id  /* 操作人员 */: bigint(20)&lt;br/&gt; username  /* 操作名称 */: varchar(30)&lt;br/&gt; operate_type  /* 操作类型 */: varchar(20)&lt;br/&gt; operate_ip  /* 操作IP */: varchar(30)&lt;br/&gt; device_type  /* 操作终端 */: varchar(10)&lt;br/&gt; operate_time  /* 操作时间 */: datetime&lt;br/&gt; remark  /* 备注 */: varchar(300)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20) unsigned&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-1479" y="684" width="268" height="230" as="geometry" />
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-9" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="C-vyLk0tnHw3VtMMgP7b-2" vertex="1">
-          <mxGeometry y="90" width="250" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-12" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_menu  /* 系统-菜单 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; parent_id  /* 父级菜单 */: bigint(20)&lt;br/&gt; code  /* 菜单编号 */: varchar(50)&lt;br/&gt; name  /* 菜单名称 */: varchar(30)&lt;br/&gt; type  /* 菜单类型（1：菜单，2：按钮） */: tinyint(1)&lt;br/&gt; path  /* 路由地址 */: varchar(255)&lt;br/&gt; icon  /* 图标 */: varchar(255)&lt;br/&gt; sort  /* 排序 */: int(11)&lt;br/&gt; visible  /* 是否可见 */: tinyint(1)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; is_deleted  /* 是否已删除 */: tinyint(1)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-970" y="-431" width="290" height="311" as="geometry" />
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-10" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="C-vyLk0tnHw3VtMMgP7b-9" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-39" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="fjgYcrH6V1LgINaARoSQ-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1170" y="860" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-1200" y="1230" />
+              <mxPoint x="-1200" y="860" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-11" value="order_date date NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="C-vyLk0tnHw3VtMMgP7b-9" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-13" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_module  /* 系统-模块管理 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; module_name  /* 模块名称 */: varchar(30)&lt;br/&gt; display_name  /* 显示名称 */: varchar(30)&lt;br/&gt; module_desc  /* 模块描述 */: varchar(200)&lt;br/&gt; enable  /* 是否启用 */: tinyint(1)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-1043" y="1060" width="283" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-13" value="Shipments" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
-          <mxGeometry x="450" y="280" width="250" height="130" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-14" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_region  /* 行政区划表 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; parent_code  /* 父区划编号 */: varchar(12)&lt;br/&gt; ancestors  /* 祖区划编号 */: varchar(255)&lt;br/&gt; name  /* 区划名称 */: varchar(32)&lt;br/&gt; province_code  /* 省级区划编号 */: varchar(12)&lt;br/&gt; province_name  /* 省级名称 */: varchar(32)&lt;br/&gt; city_code  /* 市级区划编号 */: varchar(12)&lt;br/&gt; city_name  /* 市级名称 */: varchar(32)&lt;br/&gt; district_code  /* 区级区划编号 */: varchar(12)&lt;br/&gt; district_name  /* 区级名称 */: varchar(32)&lt;br/&gt; town_code  /* 镇级区划编号 */: varchar(12)&lt;br/&gt; town_name  /* 镇级名称 */: varchar(32)&lt;br/&gt; village_code  /* 村级区划编号 */: varchar(12)&lt;br/&gt; village_name  /* 村级名称 */: varchar(32)&lt;br/&gt; level  /* 层级 */: int(11)&lt;br/&gt; sort  /* 排序 */: int(11)&lt;br/&gt; remark  /* 备注 */: varchar(255)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; code  /* 区划编号 */: varchar(12)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="-470" width="296" height="406" as="geometry" />
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-14" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="C-vyLk0tnHw3VtMMgP7b-13" vertex="1">
-          <mxGeometry y="30" width="250" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-27" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=-0.009;exitY=0.934;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="fjgYcrH6V1LgINaARoSQ-15" target="fjgYcrH6V1LgINaARoSQ-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1550" y="37" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-15" value="PK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;" parent="C-vyLk0tnHw3VtMMgP7b-14" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-37" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="fjgYcrH6V1LgINaARoSQ-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1480" y="1010" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-1550" y="1010" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-16" value="shipment_id int NOT NULL " style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;" parent="C-vyLk0tnHw3VtMMgP7b-14" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-15" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_role  /* 系统-角色 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; role_name  /* 角色名称 */: varchar(30)&lt;br/&gt; role_desc  /* 角色描述 */: varchar(50)&lt;br/&gt; alias  /* 别名 */: varchar(20)&lt;br/&gt; state  /* 状态（0：未启用，1：启用） */: tinyint(1)&lt;br/&gt; role_field_type  /* 字段权限（1：所有人，2：仅操作人可用） */: tinyint(1)&lt;br/&gt; creator  /* 创建人 */: bigint(20)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; modifier  /* 更新人 */: bigint(20)&lt;br/&gt; modify_time  /* 更新时间 */: datetime&lt;br/&gt; is_deleted  /* 是否删除 */: tinyint(1)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20) unsigned&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-1542" y="-451" width="442" height="331" as="geometry" />
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-17" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="C-vyLk0tnHw3VtMMgP7b-13" vertex="1">
-          <mxGeometry y="60" width="250" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-16" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_role_log  /* 系统-角色-日志 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; role_id  /* 角色id */: bigint(20)&lt;br/&gt; content  /* 操作内容 */: varchar(30)&lt;br/&gt; date_time  /* 操作时间 */: datetime&lt;br/&gt; create_name  /* 操作人 */: varchar(20)&lt;br/&gt; remark  /* 备注 */: varchar(50)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-1479" y="940" width="255" height="186" as="geometry" />
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-18" value="FK1" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="C-vyLk0tnHw3VtMMgP7b-17" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-17" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_role_menu  /* 系统-角色-菜单权限 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; menu_id  /* 菜单id */: bigint(20)&lt;br/&gt; role_id  /* 角色id */: bigint(20)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-1384" y="-26" width="284" height="126" as="geometry" />
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-19" value="order_id int NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="C-vyLk0tnHw3VtMMgP7b-17" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-18" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_tenant  /* 系统-租户（单位） */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; tenant_name  /* 单位名称 */: varchar(50)&lt;br/&gt; tenant_simple_name  /* 单位简称 */: varchar(20)&lt;br/&gt; tenant_phone  /* 单位电话 */: varchar(20)&lt;br/&gt; tenant_type  /* 单位类型 */: tinyint(4)&lt;br/&gt; location  /* 所在地区 */: varchar(150)&lt;br/&gt; address  /* 详细地址 */: varchar(100)&lt;br/&gt; postal_code  /* 邮政编码 */: varchar(30)&lt;br/&gt; tenant_fax  /* 单位传真 */: varchar(50)&lt;br/&gt; tenant_url  /* 单位网址 */: varchar(300)&lt;br/&gt; established_date  /* 成立时间 */: date&lt;br/&gt; introduction  /* 单位简介 */: varchar(200)&lt;br/&gt; tenant_logo  /* 单位Logo */: varchar(500)&lt;br/&gt; contact_name  /* 联系人姓名 */: varchar(20)&lt;br/&gt; contact_role  /* 联系人部门角色 */: varchar(30)&lt;br/&gt; contact_phone  /* 联系人手机号 */: varchar(20)&lt;br/&gt; contact_email  /* 联系人邮箱 */: varchar(30)&lt;br/&gt; state  /* 状态（0：注销，1：启用） */: tinyint(1)&lt;br/&gt; creator  /* 创建人 */: bigint(20)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; modifier  /* 更新人 */: bigint(20)&lt;br/&gt; modify_time  /* 更新时间 */: datetime&lt;br/&gt; is_deleted  /* 是否删除 */: tinyint(1)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20) unsigned&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="-470" width="317" height="560" as="geometry" />
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-20" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="C-vyLk0tnHw3VtMMgP7b-13" vertex="1">
-          <mxGeometry y="90" width="250" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-31" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="fjgYcrH6V1LgINaARoSQ-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1210" y="240" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-850" y="240" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-21" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="C-vyLk0tnHw3VtMMgP7b-20" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-35" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="fjgYcrH6V1LgINaARoSQ-19" target="fjgYcrH6V1LgINaARoSQ-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1180" y="330" />
+              <mxPoint x="-1180" y="480" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-22" value="shipment_date date NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="C-vyLk0tnHw3VtMMgP7b-20" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-36" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="fjgYcrH6V1LgINaARoSQ-19" target="fjgYcrH6V1LgINaARoSQ-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1180" y="330" />
+              <mxPoint x="-1190" y="730" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-23" value="Customers" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
-          <mxGeometry x="120" y="120" width="250" height="100" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-19" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sys_user  /* 系统-用户 */&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; tenant_no  /* 租户号 */: varchar(20)&lt;br/&gt; account  /* 用户账号 */: varchar(30)&lt;br/&gt; password  /* 密码 */: varchar(50)&lt;br/&gt; salt_key  /* 密钥 */: varchar(50)&lt;br/&gt; real_name  /* 真实姓名 */: varchar(20)&lt;br/&gt; nick_name  /* 用户昵称 */: varchar(20)&lt;br/&gt; avatar_url  /* 用户头像 */: varchar(500)&lt;br/&gt; gender  /* 性别（0：保密，1:男，2：女） */: tinyint(1)&lt;br/&gt; birthday  /* 生日 */: date&lt;br/&gt; phone  /* 手机号 */: varchar(20)&lt;br/&gt; email  /* 邮箱 */: varchar(30)&lt;br/&gt; wechat  /* 微信号 */: varchar(30)&lt;br/&gt; telephone  /* 座机/分机 */: varchar(50)&lt;br/&gt; dept_ids  /* 部门 */: varchar(200)&lt;br/&gt; role_ids  /* 角色 */: varchar(200)&lt;br/&gt; job_number  /* 工号 */: varchar(20)&lt;br/&gt; native_place  /* 籍贯 */: varchar(50)&lt;br/&gt; graduation_school  /* 毕业院校 */: varchar(20)&lt;br/&gt; graduation_date  /* 毕业时间 */: date&lt;br/&gt; education  /* 学历 */: varchar(10)&lt;br/&gt; major  /* 所学专业 */: varchar(10)&lt;br/&gt; remark  /* 备注 */: varchar(310)&lt;br/&gt; state  /* 状态（0：停用，1：启用，2：冻结） */: tinyint(1)&lt;br/&gt; online  /* 是否在线 */: tinyint(1)&lt;br/&gt; last_login_time  /* 最后登录时间 */: datetime&lt;br/&gt; user_field_type  /* 字段权限（1：所有人，2：仅操作人可用） */: tinyint(1)&lt;br/&gt; creator  /* 创建人 */: bigint(20)&lt;br/&gt; create_time  /* 创建时间 */: datetime&lt;br/&gt; modifier  /* 更新人 */: bigint(20)&lt;br/&gt; modify_time  /* 更新时间 */: datetime&lt;br/&gt; is_deleted  /* 是否删除 */: tinyint(1)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* 主键 */: bigint(20) unsigned&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-570" y="-470" width="433" height="780" as="geometry" />
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-24" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="C-vyLk0tnHw3VtMMgP7b-23" vertex="1">
-          <mxGeometry y="30" width="250" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-28" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=-0.007;exitY=0.919;exitDx=0;exitDy=0;entryX=1.001;entryY=0.388;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="fjgYcrH6V1LgINaARoSQ-12" target="fjgYcrH6V1LgINaARoSQ-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-970" y="23" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-25" value="PK" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;" parent="C-vyLk0tnHw3VtMMgP7b-24" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-30" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=-0.012;entryY=0.482;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fjgYcrH6V1LgINaARoSQ-15" target="fjgYcrH6V1LgINaARoSQ-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1321" y="-80" />
+              <mxPoint x="-950" y="-80" />
+              <mxPoint x="-640" y="-80" />
+              <mxPoint x="-640" y="-120" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-26" value="customer_id int NOT NULL " style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;" parent="C-vyLk0tnHw3VtMMgP7b-24" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-27" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" parent="C-vyLk0tnHw3VtMMgP7b-23" vertex="1">
-          <mxGeometry y="60" width="250" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-28" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="C-vyLk0tnHw3VtMMgP7b-27" vertex="1">
-          <mxGeometry width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-29" value="customer_name char(50) NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="C-vyLk0tnHw3VtMMgP7b-27" vertex="1">
-          <mxGeometry x="30" width="220" height="30" as="geometry" />
+        <mxCell id="fjgYcrH6V1LgINaARoSQ-38" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=-0.027;entryY=0.397;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fjgYcrH6V1LgINaARoSQ-13" target="fjgYcrH6V1LgINaARoSQ-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-720" y="1160" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
